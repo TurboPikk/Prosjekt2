@@ -91,23 +91,20 @@ def options(dictionary):
 
 
 
-y = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
-x = [o1, o2, o3, o4, o5, o6, o7, o8, o9, o10]
-
-answers = []
-
 def print_alternatives(alternatives):
-    
-    
     for key in alternatives:
         print(key, alternatives[key])
 
-
-for i in range(0,9):
+answers = []
+for i in range(10):
     print(questions[i])
     print_alternatives(alternatives[i])
     answer = input("Enter your choice: ")
     answers.append(answer)
     
-for answer in answers:
+for i in range(10):
+        if answers[i] == solution[i]:
+            print("Correct")
+        else:
+            print("Incorrect")
 
