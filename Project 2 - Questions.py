@@ -9,6 +9,8 @@ q8 = "Q8.How long is the border between Norway and Russia?"
 q9 = "Q9.Where in Norway is Stavanger?"
 q10 = "Q10.From which Norwegian city did the world famous composer Edvard Grieg come?"
 
+questions = [q1,q2,q3,q4,q5,q6,q7,q8,q9,q10]
+
 o1 = {
     "a" : "Bergen",
     "b" : "Oslo",
@@ -80,6 +82,7 @@ o10 = {
 }
 
 solution = ["b", "c", "a", "b", "a", "c", "d", "b", "c", "b"]
+alternatives = [o1,o2,o3,o4,o5,o6,o7,o8,o9,o10]
 
 def options(dictionary):
     for element in dictionary:
@@ -90,4 +93,21 @@ def options(dictionary):
 
 y = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
 x = [o1, o2, o3, o4, o5, o6, o7, o8, o9, o10]
+
+answers = []
+
+def print_alternatives(alternatives):
+    
+    
+    for key in alternatives:
+        print(key, alternatives[key])
+
+
+for i in range(0,9):
+    print(questions[i])
+    print_alternatives(alternatives[i])
+    answer = input("Enter your choice: ")
+    answers.append(answer)
+    
+for answer in answers:
 
