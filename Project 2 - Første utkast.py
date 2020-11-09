@@ -152,7 +152,7 @@ Correct answer was: {reference[i]}: {choices[i][reference[i]]}
 
 
 def quiz():
-    #login()
+    login()
     outcome = print_questions()
     results(questions, alternatives, solution, outcome)
 
